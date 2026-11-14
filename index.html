@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galáticos | Equipe de ADS da Fatec São José dos Campos</title>
+  <meta name="description" content="Portfólio da equipe Galáticos (Galaticos-API): projetos integradores do curso de Análise e Desenvolvimento de Sistemas da Fatec São José dos Campos, um por semestre, para clientes reais.">
+  <meta name="theme-color" content="#12102f">
+  <meta property="og:title" content="Galáticos | Fatec São José dos Campos">
+  <meta property="og:description" content="Um projeto por semestre, para um cliente real. Conheça os projetos API-1 a API-4 e a tripulação.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div id="live" class="sr-only" role="status" aria-live="polite"></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#topo" aria-label="Galáticos, início">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="7" fill="#ffc24b"/>
+          <ellipse cx="16" cy="16" rx="14" ry="5.5" fill="none" stroke="#8b6cff" stroke-width="2" transform="rotate(-24 16 16)"/>
+          <circle cx="28" cy="10" r="2.6" fill="#2ec4b6"/>
+        </svg>
+        Galáticos
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#metodo">Como funciona</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#extras">Missões paralelas</a>
+        <a href="#equipe">Tripulação</a>
+      </nav>
+      <a class="btn btn-line" href="https://github.com/Galaticos-API" rel="noopener">GitHub da equipe</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero" id="topo">
+      <div class="stars" id="stars" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <h1>Galáticos</h1>
+          <p class="lead">Estudantes de Análise e Desenvolvimento de Sistemas que entregam um projeto real por semestre.</p>
+          <p class="sub">Somos o grupo Galaticos-API, da Fatec Prof. Jessen Vidal, em São José dos Campos. Pela Aprendizagem por Projetos Integradores (API), cada semestre traz um cliente, um desafio e as disciplinas do período para resolvê-lo. Estamos no 4º de 6 semestres.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solar" href="#projetos">Ver os projetos</a>
+            <a class="btn btn-line" href="#equipe">Conhecer a tripulação</a>
+          </div>
+        </div>
+        <figure class="orbit-box" style="margin:0">
+          <div id="orbit"></div>
+          <noscript>
+            <ul>
+              <li><a href="#api-1">API-1</a></li>
+              <li><a href="#api-2">API-2</a></li>
+              <li><a href="#api-3">API-3</a></li>
+              <li><a href="#api-4">API-4</a></li>
+            </ul>
+          </noscript>
+          <figcaption class="orbit-caption"><strong>4 de 6 órbitas percorridas.</strong> Cada planeta é um semestre; clique para abrir o projeto.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section method" id="metodo" aria-labelledby="metodo-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="metodo-h">Como um semestre funciona</h2>
+          <p>Todo semestre segue o mesmo roteiro: o cliente apresenta o desafio, a equipe entrega em três sprints e fecha com o produto funcionando.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <h3>Kick-off</h3>
+            <span class="when">25 a 29/08/2025</span>
+            <p>O cliente apresenta o problema e a equipe entende o que precisa ser resolvido.</p>
+          </li>
+          <li class="step">
+            <h3>Sprint 1</h3>
+            <span class="when">08 a 28/09/2025</span>
+            <p>Primeiras histórias de usuário, protótipo e a base do sistema.</p>
+          </li>
+          <li class="step">
+            <h3>Sprint 2</h3>
+            <span class="when">06 a 26/10/2025</span>
+            <p>O núcleo do produto ganha forma e o cliente valida o que já existe.</p>
+          </li>
+          <li class="step">
+            <h3>Sprint 3</h3>
+            <span class="when">03 a 23/11/2025</span>
+            <p>Funcionalidades finais, ajustes e testes antes da entrega.</p>
+          </li>
+          <li class="step">
+            <h3>Entrega final</h3>
+            <span class="when">Fim do semestre</span>
+            <p>Sistema rodando, manuais de instalação e de uso e apresentação ao cliente.</p>
+          </li>
+        </ol>
+        <p class="source-note">As datas das sprints são do semestre da API-2 (2025/2), usadas aqui como exemplo. Em todos os semestres o formato é o mesmo: kick-off e três sprints de três semanas.</p>
+
+        <div class="method-note">
+          <div>
+            <h3>Backlog em histórias de usuário</h3>
+            <p>Cada necessidade vira uma história com prioridade, estimativa e sprint definidos.</p>
+          </div>
+          <div>
+            <h3>DoR e DoD a cada sprint</h3>
+            <p>Definimos quando um item está pronto para começar e quando está realmente concluído.</p>
+          </div>
+          <div>
+            <h3>Papéis de Scrum que giram</h3>
+            <p>Product Owner e Scrum Master mudam de pessoa de um semestre para o outro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-light" id="projetos" aria-labelledby="proj-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="proj-h">Quatro semestres, quatro projetos</h2>
+          <p>Cada projeto nasce de um desafio real e se conecta às disciplinas do semestre. Aqui estão eles, do mais antigo ao mais recente.</p>
+        </div>
+
+        <!-- API-1 -->
+        <article class="project" id="api-1" style="--c: var(--p1)">
+          <div class="project-text">
+            <span class="badge"><i></i>1º semestre, fev a mai de 2025</span>
+            <h3 class="project-title">API-1</h3>
+            <p class="project-sub">Atestados e avaliação de equipes ágeis</p>
+            <p class="desc">Um sistema web para registrar e organizar os atestados médicos dos alunos, aproximando estudantes, professores e coordenação. No mesmo sistema, equipes Scrum avaliam seus membros em colaboração, proatividade e entrega.</p>
+            <h4>O que o sistema faz</h4>
+            <ul class="feats">
+              <li>Recebe atestados em PDF e guarda tudo de forma organizada para consulta e relatórios</li>
+              <li>Cadastra alunos, equipes e membros de equipe</li>
+              <li>Registra avaliações de cada membro de uma equipe ágil</li>
+              <li>Mostra as métricas de avaliação em gráficos</li>
+            </ul>
+            <h4>Tecnologias</h4>
+            <ul class="chips">
+              <li>Python</li><li>Flask</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li><li>Figma</li>
+            </ul>
+            <p class="team-line"><b>Product Owner:</b> Emmanuel Garakis. <b>Scrum Master:</b> Rafael Matesco.</p>
+            <div class="project-links">
+              <a class="btn btn-ink" href="https://github.com/Galaticos-API/API-1" rel="noopener">Ver o repositório</a>
+              <button class="btn btn-outline" type="button" data-copy="git clone https://github.com/Galaticos-API/API-1.git">git clone</button>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot">
+              <img src="assets/img/api1-mvp.webp" width="1400" height="747" loading="lazy" alt="Ilustração do MVP: um avião de papel, um balão, um dirigível e um foguete, mostrando um produto que evolui até a versão final">
+              <figcaption>O MVP do projeto: do primeiro protótipo ao produto completo.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- API-2 -->
+        <article class="project" id="api-2" style="--c: var(--p2)">
+          <div class="project-text">
+            <span class="badge"><i></i>2º semestre, ago a nov de 2025</span>
+            <h3 class="project-title">API-2</h3>
+            <p class="project-sub">Sistema de PDI para a Youtan</p>
+            <p class="desc">O RH da Youtan controlava os Planos de Desenvolvimento Individual em planilhas avulsas, sem histórico consolidado nem relatórios. A equipe construiu uma aplicação desktop com banco de dados para centralizar tudo.</p>
+            <h4>O que o sistema faz</h4>
+            <ul class="feats">
+              <li>Cadastra, consulta, edita e inativa usuários</li>
+              <li>Cria um PDI por colaborador e por ano, com objetivos e metas</li>
+              <li>Avalia hard skills e soft skills e acompanha o atingimento das metas</li>
+              <li>Guarda documentos de evidência dentro de cada PDI</li>
+              <li>Mostra um painel coletivo de metas e exporta os dados para planilha</li>
+            </ul>
+            <h4>Tecnologias</h4>
+            <ul class="chips">
+              <li>Java</li><li>JavaFX</li><li>MySQL</li><li>Maven</li><li>Trello</li>
+            </ul>
+            <p class="team-line"><b>Parceiro:</b> Youtan. <b>Product Owner:</b> Emmanuel Garakis. <b>Scrum Master:</b> Rafael Matesco.</p>
+            <div class="project-links">
+              <a class="btn btn-ink" href="https://github.com/Galaticos-API/API-2" rel="noopener">Ver o repositório</a>
+              <button class="btn btn-outline" type="button" data-copy="git clone https://github.com/Galaticos-API/API-2.git">git clone</button>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot">
+              <img src="assets/img/api2-classes.webp" width="923" height="397" loading="lazy" alt="Diagrama de classes com Usuário, Funcionário, PDI, Documento e Objetivo e as relações entre eles">
+              <figcaption>Diagrama de classes: um funcionário tem PDIs, e cada PDI reúne objetivos e documentos.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- API-3 -->
+        <article class="project" id="api-3" style="--c: var(--p3)">
+          <div class="project-text">
+            <span class="badge"><i></i>3º semestre, 1º semestre de 2026</span>
+            <h3 class="project-title">API-3</h3>
+            <p class="project-sub">Mapa de oportunidade para crédito inclusivo</p>
+            <p class="desc">A DM atua há mais de 20 anos com cartões de crédito e quer alcançar perfis que os grandes bancos recusam. O desafio: descobrir onde expandir usando apenas dados públicos do Banco Central. A resposta foi uma plataforma de inteligência de crédito.</p>
+            <h4>O que o sistema faz</h4>
+            <ul class="feats">
+              <li>Mostra um mapa do Brasil colorido pelo score de oportunidade de cada estado</li>
+              <li>Filtra gráficos por período, região e estado</li>
+              <li>Simula cenários de risco com o método de Monte Carlo</li>
+              <li>Responde perguntas em linguagem natural por um assistente de IA</li>
+              <li>Protege o acesso com login seguro</li>
+            </ul>
+            <h4>Tecnologias</h4>
+            <ul class="chips">
+              <li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Chart.js</li><li>NestJS</li><li>FastAPI</li><li>SQLite</li><li>Groq API</li><li>Figma</li>
+            </ul>
+            <p class="team-line"><b>Parceiro:</b> DM. <b>Product Owner:</b> Daniel Dias. <b>Scrum Master:</b> Rafael Matesco.</p>
+            <div class="project-links">
+              <a class="btn btn-ink" href="https://github.com/Galaticos-API/API-3" rel="noopener">Ver o repositório</a>
+              <button class="btn btn-outline" type="button" data-copy="git clone https://github.com/Galaticos-API/API-3.git">git clone</button>
+            </div>
+          </div>
+          <div class="shots pair">
+            <figure class="shot">
+              <img src="assets/img/api3-demo0.webp" width="1400" height="752" loading="lazy" alt="Dashboard com o mapa do Brasil colorido por score de oportunidade, ranking de estados e gráficos de crédito">
+              <figcaption>Dashboard: mapa por estado, ranking e séries do Banco Central.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/img/api3-demo1.webp" width="1400" height="752" loading="lazy" alt="Tela de simulação Monte Carlo com parâmetros de investimento e resultados como ROI médio e probabilidade de lucro">
+              <figcaption>Simulação Monte Carlo para testar cenários de risco.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- API-4 -->
+        <article class="project" id="api-4" style="--c: var(--p4)">
+          <div class="project-text">
+            <span class="badge"><i></i>4º semestre, 2º semestre de 2026, em andamento</span>
+            <h3 class="project-title">API-4</h3>
+            <p class="project-sub">Sinapse, base inteligente de requisitos</p>
+            <p class="desc">Na PRO4TECH, fábrica de software, cada Product Owner documenta requisitos de um jeito, o conhecimento se espalha e soluções antigas são refeitas do zero. O Sinapse transforma backlog, regras de negócio e decisões em uma memória que a equipe consegue consultar.</p>
+            <h4>O que o sistema faz</h4>
+            <ul class="feats">
+              <li>Organiza o backlog em Projeto, Épico, Feature e PBI, com nota de completude para cada item</li>
+              <li>Usa a IA como copiloto que questiona e padroniza, sem gravar nada sozinha</li>
+              <li>Busca nos documentos do projeto pelo significado, não só pela palavra</li>
+              <li>Responde no chat só com o que está no acervo e cita as fontes</li>
+              <li>Roda a IA localmente, sem depender de serviços na nuvem</li>
+            </ul>
+            <h4>Tecnologias</h4>
+            <ul class="chips">
+              <li>React 19</li><li>TypeScript</li><li>Vite</li><li>Node.js</li><li>Express</li><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>n8n</li><li>Ollama</li><li>Docker</li>
+            </ul>
+            <p class="team-line"><b>Cliente:</b> PRO4TECH. <b>Product Owner:</b> Daniel Dias. <b>Scrum Master:</b> Cauan Gabriel. O backlog tem 6 épicos, 18 features e 66 PBIs.</p>
+            <div class="project-links">
+              <a class="btn btn-ink" href="https://github.com/Galaticos-API/API-4" rel="noopener">Ver o repositório</a>
+              <button class="btn btn-outline" type="button" data-copy="git clone https://github.com/Galaticos-API/API-4.git">git clone</button>
+            </div>
+          </div>
+          <div class="shots pair">
+            <figure class="shot">
+              <img src="assets/img/api4-projeto.webp" width="1400" height="972" loading="lazy" alt="Tela de detalhes de um projeto no Sinapse, com abas de visão geral, backlog, decisões e documentos">
+              <figcaption>Detalhes de um projeto no Sinapse (dados fictícios de demonstração).</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/img/api4-backlog.webp" width="1400" height="972" loading="lazy" alt="Tela do backlog em árvore do Sinapse, com épicos, features e PBIs">
+              <figcaption>Backlog em árvore, do épico até o PBI.</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="extras" aria-labelledby="extras-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="extras-h">Missões paralelas</h2>
+          <p>Além dos projetos integradores, a equipe também desenvolve trabalhos de outras disciplinas. Dois deles estão no GitHub da organização.</p>
+        </div>
+        <div class="side-grid">
+          <article class="side">
+            <span class="tag">Engenharia de Software III</span>
+            <h3>ES-III</h3>
+            <p>Um agente que faz a triagem de incidentes de segurança: classifica alertas, correlaciona evidências e propõe ações de contenção. A contenção só acontece depois da decisão de uma pessoa, e os alertas e ações são simulados. O trabalho aplica os padrões de projeto State, Command, Strategy, Observer e Composite.</p>
+            <ul class="chips">
+              <li>Java 21</li><li>Spring Boot</li><li>Spring AI</li><li>Ollama</li><li>Swing</li>
+            </ul>
+            <figure class="side-media">
+              <img src="assets/img/es3-state.webp" width="1000" height="709" loading="lazy" alt="Diagrama UML do padrão State aplicado ao ciclo de vida de um incidente">
+              <figcaption>Diagrama UML do padrão State, usado no ciclo de vida do incidente.</figcaption>
+            </figure>
+            <div class="term" aria-label="Comandos para rodar o projeto"><span class="d">$</span> <span class="k">ollama</span> pull qwen2.5:7b<br><span class="d">$</span> <span class="k">./mvnw</span> spring-boot:run</div>
+            <div class="side-actions">
+              <a class="btn btn-solar" href="https://github.com/Galaticos-API/ES-III" rel="noopener">Ver o repositório</a>
+            </div>
+          </article>
+
+          <article class="side">
+            <span class="tag">Programação Web</span>
+            <h3>webassembly-progweb</h3>
+            <p>Um exemplo prático criado para uma aula: como WebAssembly conversa com JavaScript no navegador.</p>
+            <ul class="demo-list">
+              <li>Chama funções escritas em Wasm direto do JavaScript</li>
+              <li>Compara o tempo de JavaScript e de Wasm em Fibonacci e na contagem de números primos</li>
+              <li>Aplica filtros de imagem na memória compartilhada com um canvas, sem copiar os dados</li>
+            </ul>
+            <ul class="chips">
+              <li>JavaScript</li><li>WebAssembly</li><li>C</li><li>WAT</li><li>Canvas</li>
+            </ul>
+            <div class="term" aria-label="Comandos para rodar o projeto"><span class="d">$</span> <span class="k">python</span> -m http.server 8080<br><span class="d">$</span> <span class="k">node</span> build.js <span class="d"># recompila o math.wat</span></div>
+            <div class="side-actions">
+              <a class="btn btn-solar" href="https://github.com/Galaticos-API/webassembly-progweb" rel="noopener">Ver o repositório</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section crew" id="equipe" aria-labelledby="equipe-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="equipe-h">Tripulação</h2>
+          <p>As nove pessoas do projeto atual. Os círculos mostram em quais semestres cada uma participou.</p>
+        </div>
+        <ul class="crew-grid">
+          <li class="member">
+            <div class="avatar" data-initials="DD"><img src="https://github.com/DanielDPereira.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Daniel Dias</h3>
+            <p class="role lead-role">Product Owner</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-2, API-3, API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/DanielDPereira" rel="noopener" aria-label="GitHub de Daniel Dias">GitHub</a><a href="https://www.linkedin.com/in/daniel-dias-pereira-40219425b" rel="noopener" aria-label="LinkedIn de Daniel Dias">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="CG"><img src="https://github.com/LoadCG.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Cauan Gabriel</h3>
+            <p class="role lead-role">Scrum Master</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/LoadCG" rel="noopener" aria-label="GitHub de Cauan Gabriel">GitHub</a><a href="https://www.linkedin.com/in/cauan-gabriel-nascimento-a3a1492ab" rel="noopener" aria-label="LinkedIn de Cauan Gabriel">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="EG"><img src="https://github.com/Garakis.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Emmanuel Garakis</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1, API-2, API-3, API-4"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/Garakis" rel="noopener" aria-label="GitHub de Emmanuel Garakis">GitHub</a><a href="https://www.linkedin.com/in/emmanuel-basile-garakis-filho-024572266" rel="noopener" aria-label="LinkedIn de Emmanuel Garakis">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="RM"><img src="https://github.com/RafaMatesco.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Rafael Matesco</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1, API-2, API-3, API-4"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/RafaMatesco" rel="noopener" aria-label="GitHub de Rafael Matesco">GitHub</a><a href="https://www.linkedin.com/in/rafael-giordano-matesco" rel="noopener" aria-label="LinkedIn de Rafael Matesco">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="GL"><img src="https://github.com/GaelNotFound.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Gabriel Lasaro</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1, API-2, API-3, API-4"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/GaelNotFound" rel="noopener" aria-label="GitHub de Gabriel Lasaro">GitHub</a><a href="https://www.linkedin.com/in/gaelslasaro" rel="noopener" aria-label="LinkedIn de Gabriel Lasaro">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="GM"><img src="https://github.com/Giomoret.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Giovanni Moretto</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-2, API-3, API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/Giomoret" rel="noopener" aria-label="GitHub de Giovanni Moretto">GitHub</a><a href="https://www.linkedin.com/in/giovanni-moretto-02b754271" rel="noopener" aria-label="LinkedIn de Giovanni Moretto">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="GB"><img src="https://github.com/Darkghostly.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Gustavo Bueno</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-2, API-3, API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/Darkghostly" rel="noopener" aria-label="GitHub de Gustavo Bueno">GitHub</a><a href="https://www.linkedin.com/in/gustavo-bueno-da-silva-797292324" rel="noopener" aria-label="LinkedIn de Gustavo Bueno">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="HS"><img src="https://github.com/heitors1337.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Heitor Silva</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/heitors1337" rel="noopener" aria-label="GitHub de Heitor Silva">GitHub</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="VH"><img src="https://github.com/vitorpdim.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Vitor Hugo</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-3, API-4"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="on" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/vitorpdim" rel="noopener" aria-label="GitHub de Vitor Hugo">GitHub</a></div>
+            </div>
+          </li>
+        </ul>
+        <p class="crew-legend" aria-hidden="false">
+          <span><i style="background:var(--p1)"></i>API-1</span>
+          <span><i style="background:var(--p2)"></i>API-2</span>
+          <span><i style="background:var(--p3)"></i>API-3</span>
+          <span><i style="background:var(--p4)"></i>API-4</span>
+          <span>Círculo vazio: não participou daquele semestre</span>
+        </p>
+
+        <h3 class="past-title">Também passaram pelos projetos</h3>
+        <p class="past-sub">Pessoas que aparecem nos repositórios de semestres anteriores ou na ES-III.</p>
+        <ul class="crew-grid">
+          <li class="member">
+            <div class="avatar" data-initials="CC"><img src="https://github.com/JkDeltaz.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Caio César</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1, API-2"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="" style="--c:var(--p3)" aria-hidden="true"></li><li class="" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/JkDeltaz" rel="noopener" aria-label="GitHub de Caio César">GitHub</a><a href="https://www.linkedin.com/in/caio-c%C3%A9sar-santos-79976636a" rel="noopener" aria-label="LinkedIn de Caio César">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="GM"><img src="https://github.com/GustavoMGreco.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Gustavo Monteiro</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1, API-2, API-3"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="on" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/GustavoMGreco" rel="noopener" aria-label="GitHub de Gustavo Monteiro">GitHub</a><a href="https://www.linkedin.com/in/gustavomgreco" rel="noopener" aria-label="LinkedIn de Gustavo Monteiro">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="MV"><img src="https://github.com/mavygarcia.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Marya Vitória</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-3"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="on" style="--c:var(--p3)" aria-hidden="true"></li><li class="" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/mavygarcia" rel="noopener" aria-label="GitHub de Marya Vitória">GitHub</a><a href="https://www.linkedin.com/in/marya-vit%C3%B3ria-garcia-246b77332" rel="noopener" aria-label="LinkedIn de Marya Vitória">LinkedIn</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="AA"><img src="https://github.com/AlicePenrose.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Alice Azambuja</h3>
+            <p class="role">Desenvolvedora</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Participou de API-1"><li class="on" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="" style="--c:var(--p3)" aria-hidden="true"></li><li class="" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/AlicePenrose" rel="noopener" aria-label="GitHub de Alice Azambuja">GitHub</a></div>
+            </div>
+          </li>
+          <li class="member">
+            <div class="avatar" data-initials="L"><img src="https://github.com/LucasCassiano1.png?size=144" width="72" height="72" loading="lazy" alt=""></div>
+            <h3>Lucas</h3>
+            <p class="role">Desenvolvedor</p>
+            <div class="member-foot">
+              <ol class="orbits" aria-label="Não consta nos repositórios API-1 a API-4. Aparece na equipe da ES-III"><li class="" style="--c:var(--p1)" aria-hidden="true"></li><li class="" style="--c:var(--p2)" aria-hidden="true"></li><li class="" style="--c:var(--p3)" aria-hidden="true"></li><li class="" style="--c:var(--p4)" aria-hidden="true"></li></ol>
+              <div class="links"><a href="https://github.com/LucasCassiano1" rel="noopener" aria-label="GitHub de Lucas">GitHub</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <h2>Quer ver o código por dentro?</h2>
+      <p>Todos os projetos estão abertos na organização Galaticos-API, com documentação, backlog e manuais de cada semestre.</p>
+      <div class="footer-actions">
+        <a class="btn btn-solar" href="https://github.com/Galaticos-API" rel="noopener">Abrir a organização no GitHub</a>
+        <button class="btn btn-line" type="button" data-copy="git clone https://github.com/Galaticos-API/galaticos-api.github.io.git">git clone deste site</button>
+      </div>
+      <div class="fine">
+        <span>Fatec Prof. Jessen Vidal, São José dos Campos</span>
+        <span>Galáticos, <span id="year">2026</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

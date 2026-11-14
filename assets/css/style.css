@@ -1,0 +1,1055 @@
+/* Galáticos — portfólio da equipe
+   Fatec São José dos Campos · ADS · Aprendizagem por Projetos Integradores */
+
+:root {
+  --ink: #12102f;
+  --ink-2: #1b1847;
+  --ink-3: #2b2773;
+  --line-dark: #3a3590;
+  --text: #ece9ff;
+  --muted: #b1abe0;
+
+  --paper: #f2efff;
+  --paper-2: #e4dfff;
+  --text-ink: #12102f;
+  --muted-ink: #4a4580;
+  --line-light: #cfc8f5;
+
+  --solar: #ffc24b;
+  --violet: #8b6cff;
+  --violet-deep: #5b3df5;
+
+  --p1: #ff7a59;
+  --p2: #2ec4b6;
+  --p3: #5aa9ff;
+  --p4: #ffc24b;
+
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-code: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --max: 74rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--solar);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.on-light :focus-visible {
+  outline-color: var(--violet-deep);
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--solar);
+  color: var(--ink);
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  z-index: 100;
+  border-radius: 8px;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ───────── Cabeçalho ───────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(18, 16, 47, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.brand svg {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+
+.nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--muted);
+  padding-block: 0.3rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: var(--text);
+  border-bottom-color: var(--solar);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-solar {
+  background: var(--solar);
+  color: var(--ink);
+}
+.btn-solar:hover {
+  background: #ffd176;
+}
+
+.btn-line {
+  border-color: var(--line-dark);
+  color: var(--text);
+  background: transparent;
+}
+.btn-line:hover {
+  border-color: var(--solar);
+}
+
+.site-header .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.93rem;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    gap: 1.25rem;
+    padding-bottom: 0.2rem;
+  }
+}
+
+/* ───────── Hero ───────── */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.hero .wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(3.6rem, 10vw, 8rem);
+  font-weight: 800;
+  font-stretch: 78%;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.hero .lead {
+  margin-top: 1.5rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.5;
+  max-width: 30ch;
+  color: var(--text);
+}
+
+.hero .sub {
+  margin-top: 1rem;
+  max-width: 44ch;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.orbit-box {
+  position: relative;
+}
+
+.orbit-box svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.orbit-caption {
+  margin-top: 0.4rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.orbit-caption strong {
+  color: var(--text);
+}
+
+/* órbitas desenhadas */
+.ring {
+  fill: none;
+  stroke: var(--line-dark);
+  stroke-width: 1.5;
+}
+.ring.done {
+  stroke: var(--violet);
+  stroke-opacity: 0.75;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 1.6s cubic-bezier(0.3, 0.7, 0.2, 1) forwards;
+  animation-delay: calc(var(--i) * 0.18s);
+}
+.ring.todo {
+  stroke-dasharray: 4 9;
+  stroke-linecap: round;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.planet {
+  cursor: pointer;
+  opacity: 0;
+  animation: appear 0.5s ease forwards;
+  animation-delay: calc(0.9s + var(--i) * 0.25s);
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+.planet circle.body {
+  transition: r 0.15s ease;
+}
+.planet:hover circle.body,
+.planet:focus-visible circle.body {
+  r: 20;
+}
+.planet:focus-visible {
+  outline: none;
+}
+.planet:focus-visible circle.halo {
+  stroke: var(--solar);
+  stroke-width: 3;
+}
+.planet text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  fill: var(--text);
+  text-anchor: middle;
+  pointer-events: none;
+}
+.planet .num {
+  fill: var(--ink);
+  font-size: 15px;
+  dominant-baseline: central;
+}
+.ring-note {
+  font-family: var(--font-body);
+  font-size: 13px;
+  fill: var(--muted);
+  text-anchor: middle;
+}
+.sun-g {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  fill: var(--ink);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+@media (max-width: 860px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+  }
+  .orbit-box {
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+}
+
+/* ───────── Seções ───────── */
+
+.section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.section-head {
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section-head h2 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  font-weight: 800;
+  font-stretch: 85%;
+  letter-spacing: -0.025em;
+}
+
+.section-head p {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.on-light {
+  background: var(--paper);
+  color: var(--text-ink);
+}
+.on-light .section-head p {
+  color: var(--muted-ink);
+}
+
+/* ───────── Metodologia ───────── */
+
+.method {
+  background: var(--ink-2);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  counter-reset: step;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  padding: 2.4rem 1.1rem 0 0;
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--solar);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  z-index: 1;
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  top: 0.95rem;
+  left: 1.9rem;
+  right: 0;
+  height: 2px;
+  background: var(--line-dark);
+}
+.step:last-child::after {
+  display: none;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.step .when {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: 700;
+  color: var(--solar);
+  font-size: 0.95rem;
+}
+
+.step p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 24ch;
+}
+
+.method-note {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-dark);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.method-note h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.method-note p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.source-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .step {
+    padding: 0 0 2rem 3rem;
+  }
+  .step::after {
+    top: 1.9rem;
+    bottom: 0;
+    left: 0.93rem;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+  .step p {
+    max-width: 44ch;
+  }
+  .method-note {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────── Projetos ───────── */
+
+.project {
+  --c: var(--p1);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  border-top: 2px solid var(--text-ink);
+  scroll-margin-top: 4.5rem;
+}
+
+.project:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.project:nth-of-type(even) .project-text {
+  order: 2;
+}
+
+.project:target .project-title {
+  text-decoration: underline;
+  text-decoration-color: var(--c);
+  text-decoration-thickness: 0.18em;
+  text-underline-offset: 0.12em;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.97rem;
+}
+
+.badge i {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid var(--text-ink);
+  display: inline-block;
+}
+
+.project-title {
+  margin-top: 0.8rem;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  font-stretch: 82%;
+  letter-spacing: -0.03em;
+}
+
+.project-sub {
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--muted-ink);
+}
+
+.project-text > p.desc {
+  margin-top: 1.2rem;
+  max-width: 52ch;
+}
+
+.project h4 {
+  margin-top: 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.feats {
+  margin-top: 0.6rem;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 54ch;
+}
+
+.feats li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.feats li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid var(--text-ink);
+}
+
+.chips {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chips li {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--paper-2);
+  border: 1px solid var(--line-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.team-line {
+  margin-top: 1.4rem;
+  font-size: 0.97rem;
+  color: var(--muted-ink);
+}
+
+.team-line b {
+  color: var(--text-ink);
+}
+
+.project-links {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.on-light .btn-ink {
+  background: var(--ink);
+  color: var(--paper);
+}
+.on-light .btn-ink:hover {
+  background: var(--ink-3);
+}
+
+.on-light .btn-outline {
+  border-color: var(--text-ink);
+  color: var(--text-ink);
+  background: transparent;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.on-light .btn-outline:hover {
+  background: var(--paper-2);
+}
+
+.shots {
+  display: grid;
+  gap: 1rem;
+}
+
+.shot {
+  margin: 0;
+  background: #fff;
+  border: 2px solid var(--text-ink);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 var(--c);
+}
+
+.shot img {
+  width: 100%;
+  height: auto;
+}
+
+.shot figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted-ink);
+  border-top: 2px solid var(--text-ink);
+  background: var(--paper);
+}
+
+.shots.pair {
+  gap: 1.6rem;
+}
+
+@media (max-width: 860px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+  .project:nth-of-type(even) .project-text {
+    order: 0;
+  }
+}
+
+/* ───────── Missões paralelas ───────── */
+
+.side-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.side {
+  border: 1px solid var(--line-dark);
+  border-radius: 18px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--ink-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.side .tag {
+  font-weight: 700;
+  color: var(--solar);
+  font-size: 0.97rem;
+}
+
+.side h3 {
+  margin-top: 0.4rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 800;
+  font-stretch: 85%;
+  letter-spacing: -0.02em;
+}
+
+.side p {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  max-width: 50ch;
+}
+
+.side .chips li {
+  background: var(--ink-3);
+  border-color: var(--line-dark);
+  color: var(--text);
+}
+
+.side-media {
+  margin: 1.4rem 0 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  background: #fff;
+}
+
+.side-media figcaption {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: var(--ink);
+}
+
+.side-actions {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.term {
+  margin-top: 1.4rem;
+  background: #0b0a22;
+  border: 1px solid var(--line-dark);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  font-family: var(--font-code);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text);
+  overflow-x: auto;
+}
+.term .k {
+  color: var(--solar);
+}
+.term .d {
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .side-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────── Tripulação ───────── */
+
+.crew {
+  background: var(--ink-2);
+}
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1.25rem;
+}
+
+.member {
+  background: var(--ink);
+  border: 1px solid var(--line-dark);
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 1rem;
+  align-items: center;
+}
+
+.avatar {
+  grid-row: span 2;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--ink-3);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--solar);
+  border: 2px solid var(--violet);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  align-self: end;
+}
+
+.role {
+  align-self: start;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+
+.role.lead-role {
+  color: var(--solar);
+  font-weight: 700;
+}
+
+.member-foot {
+  grid-column: 1 / -1;
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.orbits {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.orbits li {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  border: 2px solid var(--line-dark);
+  display: grid;
+  place-items: center;
+  font-size: 0;
+}
+
+.orbits li.on {
+  border-color: var(--ink);
+  background: var(--c);
+}
+
+.links {
+  display: flex;
+  gap: 0.9rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration-color: var(--solar);
+  text-underline-offset: 0.2em;
+}
+
+.past-title {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.past-sub {
+  margin-top: 0.4rem;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.crew-legend {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+
+.crew-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.crew-legend i {
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid var(--ink);
+}
+
+/* ───────── Rodapé ───────── */
+
+.site-footer {
+  padding-block: clamp(3rem, 7vw, 5rem) 2.5rem;
+  border-top: 1px solid var(--line-dark);
+}
+
+.site-footer h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  font-stretch: 82%;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+.site-footer p {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 50ch;
+}
+
+.footer-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.fine {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line-dark);
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  justify-content: space-between;
+}
+
+/* ───────── Movimento ───────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .ring.done {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .planet {
+    animation: none;
+    opacity: 1;
+  }
+  .btn {
+    transition: none;
+  }
+}
+
+.demo-list {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.6rem;
+  max-width: 50ch;
+}
+
+.demo-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text);
+}
+
+.demo-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--solar);
+}
